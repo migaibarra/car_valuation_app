@@ -29,4 +29,21 @@ describe User, type: :model do
 
   end
 
+  describe "Methods" do
+
+    it "creates a password_hash that is not equal to the password" do
+      user_example = FactoryBot.build(:user)
+      expect(user_example.password_hash).to_not eq "Passw0rd"
+    end
+    it "returns nil if the password and email is not authenticated" do
+      user_example = FactoryBot.create(:user)
+      expect(User.authenticate(user_example.email, "password")).to be_nil
+    end
+    it "returns the user if the password and email are authenticated" do
+      user_example = FactoryBot.create(:user)
+      expect(User.authenticate(user_example.email, "Pa$$w0rd"))
+    end
+
+  end
+
 end
