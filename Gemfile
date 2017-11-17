@@ -12,6 +12,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
+gem 'faker'
 
 group :development, :test do
   gem 'factory_bot_rails'
@@ -26,7 +27,7 @@ group :test do
   gem 'rails-controller-testing'
   gem 'capybara'
   gem 'poltergeist'
-  gem 'faker'
+  gem 'database_cleaner'
 end
 
 group :development do
