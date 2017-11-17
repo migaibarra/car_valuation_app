@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 describe User, type: :model do
+
   describe "Validations" do
 
     it { is_expected.to validate_presence_of(:first_name) }
@@ -27,4 +28,5 @@ describe User, type: :model do
     end
 
   end
+
 end
