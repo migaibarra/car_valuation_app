@@ -1,0 +1,7 @@
+<div class="loign-container">
+  <%= form_tag "/sessions", method: :post, class: "login-form" do %>
+  <%= text_field_tag :email %>
+  <%= text_field_tag :password %>
+  <%= <%= submit_tag "Login", class: "login-btn" %> %>
+  <% end %>
+</div>
